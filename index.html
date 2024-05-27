@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <form id="surveyForm" action="submit_survey.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="5" max="120" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+			<div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="number" id="contact" name="contact" required>
+            </div> 
+			
+            <div class="form-group">
+                <label for="favorite_food">What is your favorite Food:</label>
+                <div>
+                    <label class=checkbox-inline><input type="checkbox" name="favorite_food[]" value="Pizza"> Pizza</label>
+                    <label class=checkbox-inline><input type="checkbox" name="favorite_food[]" value="Pasta"> Pasta</label>
+                    <label class=checkbox-inline><input type="checkbox" name="favorite_food[]" value="Pap and Wors"> Pap and Wors</label>
+                    <label class=checkbox-inline><input type="checkbox" name="favorite_food[]" value="Other"> Other</label>
+                </div>
+            </div>
+			<table>
+			<tbody>
+			<tr>
+			<th></th>
+			 <th>Strongly Agree</th>
+		     <th>Agree</th>
+		     <th>Netural</th>
+		     <th>Disagree</th>
+			 <th>Strongly Disagree</th> 
+		 			 
+			 </tr>
+			 <tr>
+			 
+                <th><label>I like to watch movies<label></th>
+				<div class="rating">
+                    <td><label><input type="radio" name="watch_movies_rating" value="1" required> </label></td>
+                    <td><label><input type="radio" name="watch_movies_rating" value="2" required> </label></td>
+                    <td><label><input type="radio" name="watch_movies_rating" value="3" required> </label></td>
+                    <td><label><input type="radio" name="watch_movies_rating" value="4" required> </label></td>
+                    <td><label><input type="radio" name="watch_movies_rating" value="5" required> </label></td>
+              </tr>
+			  </div>
+			  <tr>
+                <th><label>I like to listen to the radio</th></label>
+				<div class="rating">
+                    <td><label><input type="radio" name="listen_radio_rating" value="1" required> </label></td>
+                    <td><label><input type="radio" name="listen_radio_rating" value="2" required> </label></td>
+                    <td><label><input type="radio" name="listen_radio_rating" value="3" required> </label></td>
+                    <td><label><input type="radio" name="listen_radio_rating" value="4" required> </label></td>
+                    <td><label><input type="radio" name="listen_radio_rating" value="5" required> </label></td>
+               </tr>
+			   </div>
+			   <tr>
+                <th><label>I like to eat out</th></label>
+                <div class="rating">
+                    <td><label><input type="radio" name="eat_out_rating" value="1" required> </label></td>
+                    <td><label><input type="radio" name="eat_out_rating" value="2" required> </label></td>
+                    <td><label><input type="radio" name="eat_out_rating" value="3" required> </label></td>
+                    <td><label><input type="radio" name="eat_out_rating" value="4" required> </label></td>
+                    <td><label><input type="radio" name="eat_out_rating" value="5" required> </label></td>
+                </tr>
+				</div>
+			   <tr>
+                <th><label>I like to watch TV</th></label>
+                <div class="rating">
+                    <td><label><input type="radio" name="watch_tv_rating" value="1" required> </label></td>
+                    <td><label><input type="radio" name="watch_tv_rating" value="2" required> </label></td>
+                    <td><label><input type="radio" name="watch_tv_rating" value="3" required> </label></td>
+                    <td><label><input type="radio" name="watch_tv_rating" value="4" required> </label></td>
+                    <td><label><input type="radio" name="watch_tv_rating" value="5" required> </label></td>
+                </tr>
+				</div>
+				</table>
+			</tbody>
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="window.location.href='view_results.php'">View Results</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
